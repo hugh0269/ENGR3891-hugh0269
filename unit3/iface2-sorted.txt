@@ -1,0 +1,36 @@
+
+
+
+
+
+
+
+
+
+
+
+
+	address 103.167.11.105/15
+	address 104.78.237.89/19
+	hwaddress 44:DE:7C:A5:89:4E
+	hwaddress 65:70:5A:8A:3F:62
+	hwaddress 66:82:64:98:D9:A8
+	hwaddress D0:85:FA:54:D8:35
+	hwaddress E9:E2:5E:53:60:AA
+iface castle1 inet static
+iface eth1 inet dhcp inherits moths3
+iface eth2 inet dhcp
+iface eth3 inet dhcp inherits wealth0
+iface ftdi4 inet dhcp inherits wealth4
+iface ftdi5 inet dhcp inherits wealth0
+iface ftdi6 inet static inherits wealth0
+iface moths3 inet static
+iface wealth0 inet static
+iface wealth2 inet static
+iface wealth4 inet static
+iface wlan0 inet static
+	mtu 2606
+	mtu 4908
+	mtu 6133
+	mtu 7029
+	mtu 7813

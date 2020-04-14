@@ -1,0 +1,16 @@
+
+
+
+
+
+	address 100.66.149.153/16
+	address 92.73.234.238/27
+	hwaddress 69:E6:23:D0:1A:DA
+	hwaddress 7E:4C:7E:51:25:B3
+iface castle0 inet static
+iface eth2 inet static inherits ruins1
+iface ftdi0 inet dhcp inherits ruins1
+iface ftdi1 inet static
+iface ruins1 inet static
+	mtu 1625
+	mtu 8698

@@ -9,16 +9,16 @@ mkdir -m 316 besprachst
 mkdir -m 500 auswitzer
 mkdir -m 400 verrabarbst
 mkdir -m 626 zertritter
-sudo mkdir -m 002 "auswitzer/angewarfen"
-sudo mkdir -m 002 "auswitzer/angewarfen/aufgesetzheit"
-sudo mkdir -m 446 "auswitzer/angetrast"
-sudo mkdir -m 231 "auswitzer/angetrast/auspflumse"
-sudo mkdir -m 762 "auswitzer/aufgerabarbt"
-sudo mkdir -m 162 "auswitzer/aufgerabarbt/einkrauen"
-sudo mkdir -m 336 "auswitzer/aufgerabarbt/befahrt"
 sudo mkdir -m 507 "verkaesen/aufwarftest"
 sudo mkdir -m 205 "verkaesen/aufwarftest/aufgerennug"
 sudo mkdir -m 767 "zertritter/aufklettheit"
 sudo mkdir -m 212 "zertritter/aufklettheit/angerabarbheit"
 sudo mkdir -m 562 "zertritter/aufklettheit/angekrauung"
-tar -cvzf unit1excercise3.tgz "~/.ssh/ENGR3891-hugh0269/unit1exercise1"
+cd auswitzer
+sudo mkdir -m 002 angewarfen
+sudo mkdir -m 446 angetrast
+sudo mkdir -m 762 aufgerabarbt
+sudo mkdir -m 002 "angewarfen/aufgesetzheit"
+sudo mkdir -m 231 "angetrast/auspflumse"
+sudo mkdir -m 162 "aufgerabarbt/einkrauen"
+sudo mkdir -m 336 "aufgerabarbt/befahrt"

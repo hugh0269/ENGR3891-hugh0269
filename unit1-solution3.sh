@@ -1,6 +1,6 @@
 #!/bin/sh
-sudo mkdir unit1exercise2
-cd unit1exercise2
+sudo mkdir unit1exercise3
+cd unit1exercise3
 mkdir -m 507 angetritter
 mkdir -m 610 aushundheit
 mkdir -m 653 aufgewarfs
@@ -49,4 +49,4 @@ chown nobody:cdrom "angetritter/beschmeckung/ausrauchheit"
 chown proxy:floppy "angetritter/beschmeckung/aufkletts"
 
 
-tar -cvzf name.tgz /home/josh/.ssh/ENGR3891-hugh0269/unit1exercise2
+tar -cvzf name.tgz /home/josh/.ssh/ENGR3891-hugh0269/unit1exercise3

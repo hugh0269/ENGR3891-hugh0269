@@ -49,4 +49,4 @@ chown nobody:cdrom "angetritter/beschmeckung/ausrauchheit"
 chown proxy:floppy "angetritter/beschmeckung/aufkletts"
 
 
-tar -cvzf name.tgz /home/josh/.ssh/ENGR3891-hugh0269/unit1exercise3
+#tar -cvzf name.tgz /home/josh/.ssh/ENGR3891-hugh0269/unit1exercise3

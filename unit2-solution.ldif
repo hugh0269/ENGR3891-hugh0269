@@ -18,67 +18,75 @@ dn: o=Cut-Price Components,dc=nodomain
 o: Cut-Price Components
 objectClass: organization
 
+dn: o=inetOrgPerson,dc=nodomain
+o: inetOrgPerson
+objectClass: inetOrgPerson
+
+dn: o=organisationalPerson,dc=nodomain
+o: organisationalPerson
+objectClass: organisationalPerson
+
 dn: ou=Pest Control,o=Consolidated Nouns,dc=nodomain
 ou: Pest Control
-objectClass: organizationalunit
+objectClass: organizationalUnit
 
 dn: ou=Production,o=Consolidated Nouns,dc=nodomain
 ou: Production
-objectClass: organizationalunit
+objectClass: organizationalUnit
 
 dn: ou=Statisical misinterpretation,o=Consolidated Nouns,dc=nodomain
 ou: Statistical misinterpretation
-objectClass: organizationalunit
+objectClass: organizationalUnit
 
 dn: ou=Consolidation,o=Adjectival Components,dc=nodomain
 ou: Consolidation
-objectClass: organizationalunit
+objectClass: organizationalUnit
 
 dn: ou=Manufacture,o=Adjectival Components,dc=nodomain
 ou: Manufacture
-objectClass: organizationalunit
+objectClass: organizationalUnit
 
 dn: ou=Environmental exploitation,o=Classic Exports,dc=nodomain
 ou: Environmental exploitation
-objectClass: organizationalunit
+objectClass: organizationalUnit
 
 dn: ou=Marketing,o=Classic Exports,dc=nodomain
 ou: Marketing
-objectClass: organizationalunit
+objectClass: organizationalUnit
 
 dn: ou=market punctuation,o=Classic Exports,dc=nodomain
 ou: market punctuation
-objectClass: organizationalunit
+objectClass: organizationalUnit
 
 dn: ou=Diabolical schemes,o=Classic Exports,dc=nodomain
 ou: Diabolical schemes
-objectClass: organizationalunit
+objectClass: organizationalUnit
 
 dn: ou=Consolidation,o=International University,dc=nodomain
 ou: Consolidation
-objectClass: organizationalunit
+objectClass: organizationalUnit
 
 dn: ou=Statistical misinterpretation,o=International University,dc=nodomain
 ou: Statistical misinterpreation
-objectClass: organizationalunit
+objectClass: organizationalUnit
 
 
 dn: ou=Diabolical schemes,o=International University,dc=nodomain
 ou: Diabolical schemes
-objectClass: organizationalunit
+objectClass: organizationalUnit
 
 dn: ou=Rhetorical devices,o=Cut-Price Components,dc=nodomain
 ou: Rhetorical devices
-objectClass: organizationalunit
+objectClass: organizationalUnit
 
 dn: ou=Environmental Protection,o=Cut-Price Components,dc=nodomain
 ou: Environmental Protection
-objectClass: organizationalunit
+objectClass: organizationalUnit
 
 dn: ou=Pest Control,o=Cut-Price Components,dc=nodomain
 ou: Pest Control
-objectClass: organizationalunit
+objectClass: organizationalUnit
 
 dn: ou=Human Resources,o=Cut-Price Components,dc=nodomain
 ou: Human Resources
-objectClass: organizationalunit
+objectClass: organizationalUnit

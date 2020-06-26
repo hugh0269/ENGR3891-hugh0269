@@ -21,4 +21,4 @@ sudo mkdir -m 205 "verkaesen/aufwarftest/aufgerennug"
 sudo mkdir -m 767 "zertritter/aufklettheit"
 sudo mkdir -m 212 "zertritter/aufklettheit/angerabarbheit"
 sudo mkdir -m 562 "zertritter/aufklettheit/angekrauung"
-tar -cvzf name.tgz /home/josh/.ssh/ENGR3891-hugh0269/unit1exercise1
+tar -cvzf unit1excercise3.tgz "~/.ssh/ENGR3891-hugh0269/unit1exercise1"

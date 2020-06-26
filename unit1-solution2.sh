@@ -42,4 +42,3 @@ chown lp:audio "beschmeckung"
 chown news:student "beschmeckung/ausgesprachs"
 chown nobody:cdrom "beschmeckung/ausrauchheit"
 chown proxy:floppy "beschmeckung/aufkletts"
-sudo tar -cvzf name.tgz /home/josh/.ssh/ENGR3891-hugh0269/unit1exercise2

@@ -25,21 +25,6 @@ sudo mkdir -m 137 "verfahrs/bewitzse/"
 sudo mkdir -m 771 "verfahrtest/angegeher"
 sudo mkdir -m 552 "verfahrtest/angegeher/angehalttete"
 
-#chown news:tape angetritter
-#chown news:student aushundheit
-#chown mail:floppy aufgewarfs
-#chown proxy:fax besprachtest
-#chown news:fax enpflums
-#chown news:news enpflumen
-#chown news:cdrom "enpflumen/aufgesitzse"
-#chown nobody:tape "enpflumen/aufgesitzse"
-#chown mail:student "enpflumen/beklettte"
-#chown proxy:tape verklettt
-#chown proxy:voice "verklettt/aufwarfheit"
-#chown games:tape "verklettt/aufwarfheit/enwarfst"
-#chown news:fax "verklettt/aufwarfheit/bestehs"
-#chown news:floppy verrennkeit
-
 cd einwitzse
 sudo mkdir -m 257 "einwitzse/befahrtete"
 sudo mkdir -m 047 "einwitzse/verklettung"
@@ -47,4 +32,4 @@ sudo mkdir -m 603 "einwitzse/befahrtete/angesetztest"
 sudo mkdir -m 707 "einwitzse/befahrtete/aufstehen"
 sudo mkdir -m 736 "einwitzse/verklettung/belaufung"
 
-tar -cvzf name.tgz /home/josh/.ssh/ENGR3891-hugh0269/unit1exercise4
+#tar -cvzf name.tgz /home/josh/.ssh/ENGR3891-hugh0269/unit1exercise4

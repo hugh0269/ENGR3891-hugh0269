@@ -1,52 +1,50 @@
 #!/bin/sh
-sudo mkdir unit1exercise2
-cd unit1exercise2
-mkdir -m 507 angetritter
-mkdir -m 610 aushundheit
-mkdir -m 653 aufgewarfs
-mkdir -m 353 besprachtest
-mkdir -m 073 enpflums
-mkdir -m 012 enpflumen
-mkdir -m 711 verklettt
-mkdir -m 603 verrennkeit
+sudo mkdir unit1exercise4
+cd unit1exercise4
+mkdir -m 111 auffahren
+mkdir -m 467 aufwitzung
+mkdir -m 320 begehs
+mkdir -m 206 einstehst
+mkdir -m 523 einwitzse
+mkdir -m 650 gelaufkeit
+mkdir -m 127 verfahrtest
+mkdir -m 147 verfahrs
 
-sudo mkdir -m 173 "enpflumen/aufgesitzse"
-sudo mkdir -m 227 "enpflumen/aufgesitzse/zerraucher"
-sudo mkdir -m 243 "enpflumen/beklettte"
+sudo mkdir -m 230 "auffahren/gekaest/"
+sudo mkdir -m 135 "auffahren/gekaest/auftrittung"
+sudo mkdir -m 112 "auffahren/gekaest/enrauchkeit"
+sudo mkdir -m 376 "auffahren/gekaest/zerstehung"
+sudo mkdir -m 247 "einwitzse/bafahrtete/"
+sudo mkdir -m 603 "einwitzse/bafahrtete/angesetztest"
+sudo mkdir -m 717 "einwitzse/bafahrtete/aufstehen"
+sudo mkdir -m 047 "einwitzse/verklettung/"
+sudo mkdir -m 736 "einwitzse/verklettung/belaufung"
 
-sudo mkdir -m 725 "verklettt/aufwarfheit"
-sudo mkdir -m 337 "verklettt/aufwarfheit/enwarfst"
-sudo mkdir -m 341 "verklettt/aufwarfheit/bestehs"
+sudo mkdir -m 137 "verfahrs/bewitzse/"
 
-chown news:tape angetritter
-chown news:student aushundheit
-chown mail:floppy aufgewarfs
-chown proxy:fax besprachtest
-chown news:fax enpflums
-chown news:news enpflumen
-chown news:cdrom "enpflumen/aufgesitzse"
-chown nobody:tape "enpflumen/aufgesitzse"
-chown mail:student "enpflumen/beklettte"
-chown proxy:tape verklettt
-chown proxy:voice "verklettt/aufwarfheit"
-chown games:tape "verklettt/aufwarfheit/enwarfst"
-chown news:fax "verklettt/aufwarfheit/bestehs"
-chown news:floppy verrennkeit
+sudo mkdir -m 771 "verfahrtest/angegeher"
+sudo mkdir -m 552 "verfahrtest/angegeher/angehalttete"
 
-cd angetritter
-sudo mkdir -m 507 "angetritter/antrittung"
-sudo mkdir -m 116 "angetritter/antrittung/ankaeser"
-sudo mkdir -m 034 "angetritter/beschmeckung"
-sudo mkdir -m 323 "angetritter/beschmeckung/ausgesprachs"
-sudo mkdir -m 721 "angetritter/beschmeckung/ausrauchheit"
-sudo mkdir -m 420 "angetritter/beschmeckung/aufkletts"
+#chown news:tape angetritter
+#chown news:student aushundheit
+#chown mail:floppy aufgewarfs
+#chown proxy:fax besprachtest
+#chown news:fax enpflums
+#chown news:news enpflumen
+#chown news:cdrom "enpflumen/aufgesitzse"
+#chown nobody:tape "enpflumen/aufgesitzse"
+#chown mail:student "enpflumen/beklettte"
+#chown proxy:tape verklettt
+#chown proxy:voice "verklettt/aufwarfheit"
+#chown games:tape "verklettt/aufwarfheit/enwarfst"
+#chown news:fax "verklettt/aufwarfheit/bestehs"
+#chown news:floppy verrennkeit
 
-chown mail:student "angetritter/antrittung"
-chown games:dip "angetritter/antrittung/ankaeser"
-chown lp:audio "angetritter/beschmeckung"
-chown news:student "angetritter/beschmeckung/ausgesprachs"
-chown nobody:cdrom "angetritter/beschmeckung/ausrauchheit"
-chown proxy:floppy "angetritter/beschmeckung/aufkletts"
+cd einwitzse
+sudo mkdir -m 257 "einwitzse/befahrtete"
+sudo mkdir -m 047 "einwitzse/verklettung"
+sudo mkdir -m 603 "einwitzse/befahrtete/angesetztest"
+sudo mkdir -m 707 "einwitzse/befahrtete/aufstehen"
+sudo mkdir -m 736 "einwitzse/verklettung/belaufung"
 
-
-tar -cvzf name.tgz /home/josh/.ssh/ENGR3891-hugh0269/unit1exercise2
+tar -cvzf name.tgz /home/josh/.ssh/ENGR3891-hugh0269/unit1exercise4

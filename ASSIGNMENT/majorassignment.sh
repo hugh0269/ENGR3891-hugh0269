@@ -2,6 +2,8 @@
 
 #Major Assignment Submission for hugh0269
 #THIS IS NOT THE FINAL SUBMISSION; PLEASE FOLLOW THE SUBMISSION TIME (AND ATTACHED GIT REVISION NUMBER) FOR THE FINAL SUBMISSION
+#for some reason the player can never lose, only win or draw. Investigating
+#the output formatting is poor, investigating
 
 #initial variables
 gamewins=0
@@ -59,8 +61,7 @@ then
 		echo -n "SCORE: YOU-$gamewins wins CPU-$compgamewins wins"
 		echo -n ""
 		read -p 'Enter 1(rock), 2(paper) or 3(scissors)' choice
-		compchoice=$(( RANDOM % 3 ))
-#		compchoice=`expr $compchoice + 1`
+		compchoice=$(shuf -i 1-3 -n 1)
 #		echo "chose $choice!"
 		if [ $choice -eq 1 ]
 		then
@@ -86,32 +87,38 @@ then
 		then
 		echo -n " "
 		echo "DRAW! no points"
-		elif [ $choice -eq "1" ] && [ $compchoice -eq "2" ]
+		elif [ $choice -eq 1 ] && [ $compchoice -eq 2 ]
+		then
+		compwins=true
+		elif [ $choice -eq 1 ] && [ $compchoice -eq 3 ]
 		then
 		wins=true
-		elif [ $choice -eq "1" ] && [ $compchoice -eq "3" ]
-		then
-		compwins=true
 		elif [ $choice -eq 2 ] && [ $compchoice -eq 1 ]
 		then
-		compwins=true
+		wins=true
 		elif [ $choice -eq 3 ] && [ $compchoice -eq 1 ]
 		then
-		win=true
+		compwins=true
 		elif [ $choice -eq 2 ] && [ $compchoice -eq 3 ]
 		then
-		win=true
+		compwins=true
 		elif [ $choice -eq 3 ] && [ $compchoice -eq 2 ]
 		then
-		compwins=true
-		fi
-		if [ $win=true ]
-		then
-		echo "You win!"
-		gamewins=`expr $gamewins + 1`
+		wins=true
 		else
-		echo "You lose"
+		wins=false
+		compwins=false
+		fi
+		if [ $wins=true ]
+		then
+		echo -n "You win!"
+		gamewins=`expr $gamewins + 1`
+		elif [ $compwins=true ]
+		then
+		echo -n "You lose"
 		compgamewins=`expr $compgamewins + 1`
+		else
+		echo -n "significant calculation error, no score change!"
 		fi
 		done
 	else

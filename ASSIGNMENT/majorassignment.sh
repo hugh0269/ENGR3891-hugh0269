@@ -27,30 +27,41 @@ sleep 0.3
 printf "\033c"
 echo "LOADING DONE! "
 sleep 1.5
-echo -n "Press enter to continue"
-read start
+#echo -n "Press enter to continue"
+#read start
 printf "\033c"
 
 echo -n "WELCOME TO ROCK PAPER SCISSORS"
-read -p "Type\'h\'now for help on how to play, otherwise press enter to start a match!" input1
-if [$input1 == "h"]
-then
-echo "google it"
-else echo -n "lets go!"
-a=1
+#read -p "Type\'h\'now for help on how to play, otherwise press enter to start a match!" input1
+#sleep 0.1
+#if [$input1=="h"];
+#then
+#	echo "google it"
+#else
+	echo -n "lets go!"
+#fi
+
+a=0
+#read -p "1/2/3:"
 while  [ $a -lt 3 ]
-do
-echo -n "best of 3"
-read -p 'Enter 1, 2 or 3' choice
-
-if [$choice == 1]
-then echo -n "You picked 1"
-elif [$choice == 2]
-then echo -n "You picked 2"
-elif [$choice == 3]
-then echo -n "You picked 3"
-else echo -n "Invalid input - try again"
-
+	do
+#	echo -n "best of 3"
+	read -p 'Enter 1, 2 or 3' choice
+#	echo "chose $choice!"
+	if [ $choice -eq 1 ]
+	then
+	echo -n "You picked 1"
+	elif [ $choice -eq 2 ]
+	then
+	echo -n "You picked 2"
+	elif [ $choice -eq 3 ]
+	then
+	echo -n "You picked 3"
+	else
+	echo -n "Invalid input - try again"
+	fi
+	a=`expr $a + 1`
+	done
 #Initial game loop
 #echo " "
 #a=1
@@ -60,6 +71,6 @@ else echo -n "Invalid input - try again"
 #	a=`expr $a + 1`
 #done
 
-end
 echo "That's all folks"
+#end
 exit

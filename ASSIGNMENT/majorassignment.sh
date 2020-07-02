@@ -43,34 +43,41 @@ echo -n "WELCOME TO ROCK PAPER SCISSORS"
 
 a=0
 #read -p "1/2/3:"
-while  [ $a -lt 3 ]
-	do
-#	echo -n "best of 3"
-	read -p 'Enter 1, 2 or 3' choice
-#	echo "chose $choice!"
-	if [ $choice -eq 1 ]
-	then
-	echo -n "You picked 1"
-	elif [ $choice -eq 2 ]
-	then
-	echo -n "You picked 2"
-	elif [ $choice -eq 3 ]
-	then
-	echo -n "You picked 3"
-	else
-	echo -n "Invalid input - try again"
-	fi
-	a=`expr $a + 1`
-	done
-#Initial game loop
-#echo " "
-#a=1
-#while  [ $a -lt 10 ]
-#do
-#	echo $a
-#	a=`expr $a + 1`
-#done
 
+read -p "how many rounds? (less than 100 please)" roundnum
+	echo -n ""
+
+if [ $roundnum -lt 101 ]
+then
+	echo -n "best of $roundnum games"
+
+	while  [ $a -lt $roundnum ]
+	do
+		read -p 'Enter 1(rock), 2(paper) or 3(scissors)' choice
+
+#		echo "chose $choice!"
+		if [ $choice -eq 1 ]
+		then
+		echo -n "You picked rock"
+		a=`expr $a + 1`
+
+		elif [ $choice -eq 2 ]
+		then
+		echo -n "You picked paper"
+		a=`expr $a + 1`
+
+		elif [ $choice -eq 3 ]
+		then
+		echo -n "You picked scissors"
+		a=`expr $a + 1`
+
+		else
+		echo -n "Invalid input - try again"
+		fi
+		done
+	else
+	echo "Too many rounds, I won't let you play this much Rock Paper Scissors at once!!"
+	fi
 echo "That's all folks"
 #end
 exit

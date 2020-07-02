@@ -59,7 +59,8 @@ then
 		echo -n "SCORE: YOU-$gamewins wins CPU-$compgamewins wins"
 		echo -n ""
 		read -p 'Enter 1(rock), 2(paper) or 3(scissors)' choice
-		compchoice=$(( (RANDOM % 3 ) + 1))
+		compchoice=$(( RANDOM % 3 ))
+#		compchoice=`expr $compchoice + 1`
 #		echo "chose $choice!"
 		if [ $choice -eq 1 ]
 		then
@@ -85,22 +86,22 @@ then
 		then
 		echo -n " "
 		echo "DRAW! no points"
-		elif [ $choice -eq 1 && $compchoice -eq 2 ]
+		elif [ $choice -eq "1" ] && [ $compchoice -eq "2" ]
 		then
 		wins=true
-		elif [ $choice -eq 1 && $compchoice -eq 3 ]
+		elif [ $choice -eq "1" ] && [ $compchoice -eq "3" ]
 		then
 		compwins=true
-		elif [ $choice -eq 2 && $compchoice -eq 1 ]
+		elif [ $choice -eq 2 ] && [ $compchoice -eq 1 ]
 		then
 		compwins=true
-		elif [[ $choice -eq 3 && $compchoice -eq 1 ]]
+		elif [ $choice -eq 3 ] && [ $compchoice -eq 1 ]
 		then
 		win=true
-		elif [ $choice -eq 2 && $compchoice -eq 3 ]
+		elif [ $choice -eq 2 ] && [ $compchoice -eq 3 ]
 		then
 		win=true
-		elif [[ $choice -eq 3 && $compchoice -eq 2 ]]
+		elif [ $choice -eq 3 ] && [ $compchoice -eq 2 ]
 		then
 		compwins=true
 		fi
@@ -110,12 +111,12 @@ then
 		gamewins=`expr $gamewins + 1`
 		else
 		echo "You lose"
-		compwins=`expr $compgamewins + 1`
+		compgamewins=`expr $compgamewins + 1`
 		fi
 		done
 	else
 	echo "Too many rounds, I won't let you play this much Rock Paper Scissors at once!!"
 	fi
-echo "That's all folks"
+echo "Exiting.."
 #end
 exit

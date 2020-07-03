@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #Major Assignment Submission for hugh0269
-#THIS IS THE FINAL SUBMISSION
+#THIS IS THE FINAL SUBMISSION, check the latest git repo commit for revisions and updates
 
 #initial variables
 gamewins=0
@@ -32,15 +32,8 @@ printf "\033c"
 echo -n "---------------------------------"
 echo -n "\n WELCOME TO ROCK PAPER SCISSORS"
 echo -n "\n---------------------------------\n"
-#read -p "Type\'h\'now for help on how to play, otherwise press enter to start a match!" input1
-#sleep 0.1
-#if [$input1=="h"];
-#then
-#	echo "google it"
-#else
-	echo -n "lets go!\n"
-#fi
 
+echo -n "lets go!\n"
 echo -n ""
 read -p "how many rounds? (less than 100 please)" roundnum
 echo -n ""

@@ -1,8 +1,7 @@
 #!/bin/bash
 
 #Major Assignment Submission for hugh0269
-#THIS IS NOT THE FINAL SUBMISSION; PLEASE FOLLOW THE SUBMISSION TIME (AND ATTACHED GIT REVISION NUMBER) FOR THE FINAL SUBMISSION
-#for some reason the player can never lose, only win or draw. Investigating
+#THIS IS THE FINAL SUBMISSION
 
 #initial variables
 gamewins=0
@@ -57,70 +56,75 @@ then
 		echo -n ""
 		echo -n "\n\nSCORE: YOU-$gamewins wins CPU-$compgamewins wins\n"
 		echo -n ""
+#gameloop
 		read -p 'Enter 1(rock), 2(paper) or 3(scissors)' choice
 		compchoice=$(shuf -i 1-3 -n 1)
-	if [ $choice -eq 1 ]
-		then
-		echo -n "You picked rock"
-		incr=`expr $incr + 1`
+		if [ $choice -eq 1 ]
+			then
+			echo -n "You picked rock"
+			incr=`expr $incr + 1`
 
-	elif [ $choice -eq 2 ]
-		then
-		echo -n "You picked paper"
-		incr=`expr $incr + 1`
+		elif [ $choice -eq 2 ]
+			then
+			echo -n "You picked paper"
+			incr=`expr $incr + 1`
 
-	elif [ $choice -eq 3 ]
-		then
-		echo -n "You picked scissors"
-		incr=`expr $incr + 1`
+		elif [ $choice -eq 3 ]
+			then
+			echo -n "You picked scissors"
+			incr=`expr $incr + 1`
 
+			else
+			echo -n "Invalid input - try again"
+			continue
+			fi
+#debug choice
+#		echo "$choice and $compchoice"
+#check outcome
+		if [ $choice -eq $compchoice ]
+			then
+			echo -n "\nDRAW! no points"
+			continue
+		elif [ $choice -eq 1 ] && [ $compchoice -eq 2 ]
+			then
+			compwins=true
+		elif [ $choice -eq 1 ] && [ $compchoice -eq 3 ]
+			then
+			wins=true
+		elif [ $choice -eq 2 ] && [ $compchoice -eq 1 ]
+			then
+			wins=true
+		elif [ $choice -eq 3 ] && [ $compchoice -eq 1 ]
+			then
+			compwins=true
+		elif [ $choice -eq 2 ] && [ $compchoice -eq 3 ]
+			then
+			compwins=true
+		elif [ $choice -eq 3 ] && [ $compchoice -eq 2 ]
+			then
+			wins=true
 		else
-		echo -n "Invalid input - try again"
-		continue
+			wins=false
+			compwins=false
 		fi
-	echo "$choice and $compchoice"
-	if [ $choice -eq $compchoice ]
-		then
-		echo -n "\nDRAW! no points"
-		continue
-	elif [ $choice -eq 1 ] && [ $compchoice -eq 2 ]
-		then
-		compwins=true
-	elif [ $choice -eq 1 ] && [ $compchoice -eq 3 ]
-		then
-		wins=true
-	elif [ $choice -eq 2 ] && [ $compchoice -eq 1 ]
-		then
-		wins=true
-	elif [ $choice -eq 3 ] && [ $compchoice -eq 1 ]
-		then
-		compwins=true
-	elif [ $choice -eq 2 ] && [ $compchoice -eq 3 ]
-		then
-		compwins=true
-	elif [ $choice -eq 3 ] && [ $compchoice -eq 2 ]
-		then
-		wins=true
+#win or loss check
+		if [ $wins = true ]
+			then
+			echo -n "\nYou win!"
+			gamewins=`expr $gamewins + 1`
+		elif [ $wins = false ]
+			then
+			echo -n "\nYou lose"
+			compgamewins=`expr $compgamewins + 1`
 		else
-		wins=false
-		compwins=false
+			echo -n "\nsignificant calculation error, no score change!"
 		fi
-	if [ $wins=true ] && [ $compwins=true ]
-		then
-		echo -n "\nYou win!"
-		gamewins=`expr $gamewins + 1`
-	elif [ $compwins=true ] && [ $wins=false ]
-		then
-		echo -n "\nYou lose"
-		compgamewins=`expr $compgamewins + 1`
+			done
 		else
-		echo -n "\nsignificant calculation error, no score change!"
+		echo -n "Too many rounds, I won't let you play this much Rock Paper Scissors at once!!"
 		fi
-		done
-	else
-	echo -n "Too many rounds, I won't let you play this much Rock Paper Scissors at once!!"
-	fi
-echo -n "\n\nFINAL SCORE: \nPLAYER:$gameswins\nCPU:$compgamewins"
+echo -n "\n\nFINAL SCORE: \nPLAYER:$gamewins\nCPU:$compgamewins"
 echo -n "\nExiting.."
 #end of program
 exit
+

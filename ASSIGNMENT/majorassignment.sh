@@ -3,7 +3,6 @@
 #Major Assignment Submission for hugh0269
 #THIS IS NOT THE FINAL SUBMISSION; PLEASE FOLLOW THE SUBMISSION TIME (AND ATTACHED GIT REVISION NUMBER) FOR THE FINAL SUBMISSION
 #for some reason the player can never lose, only win or draw. Investigating
-#the output formatting is poor, investigating
 
 #initial variables
 gamewins=0
@@ -99,7 +98,7 @@ then
 	elif [ $choice -eq 2 ] && [ $compchoice -eq 3 ]
 		then
 		compwins=true
-	elif [[ $choice -eq 3 ] && [ $compchoice -eq 2 ]]
+	elif [ $choice -eq 3 ] && [ $compchoice -eq 2 ]
 		then
 		wins=true
 		else

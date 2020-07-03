@@ -30,50 +30,47 @@ sleep 0.3
 printf "\033c"
 echo "LOADING DONE! "
 sleep 1.5
-#echo -n "Press enter to continue"
-#read start
 printf "\033c"
-
-echo -n "WELCOME TO ROCK PAPER SCISSORS"
-echo -n ""
+echo -n "---------------------------------"
+echo -n "\n WELCOME TO ROCK PAPER SCISSORS"
+echo -n "\n---------------------------------\n"
 #read -p "Type\'h\'now for help on how to play, otherwise press enter to start a match!" input1
 #sleep 0.1
 #if [$input1=="h"];
 #then
 #	echo "google it"
 #else
-	echo -n "lets go!"
+	echo -n "lets go!\n"
 #fi
 
-
+echo -n ""
 read -p "how many rounds? (less than 100 please)" roundnum
-	echo -n ""
+echo -n ""
 
 if [ $roundnum -lt 101 ]
 then
-	echo -n "best of $roundnum games"
+	echo -n "\n$roundnum rounds selected!"
 
 	while  [ $incr -lt $roundnum ]
 	do
 		compwins=false
 		wins=false
 		echo -n ""
-		echo -n "SCORE: YOU-$gamewins wins CPU-$compgamewins wins"
+		echo -n "\n\nSCORE: YOU-$gamewins wins CPU-$compgamewins wins\n"
 		echo -n ""
 		read -p 'Enter 1(rock), 2(paper) or 3(scissors)' choice
 		compchoice=$(shuf -i 1-3 -n 1)
-#		echo "chose $choice!"
-		if [ $choice -eq 1 ]
+	if [ $choice -eq 1 ]
 		then
 		echo -n "You picked rock"
 		incr=`expr $incr + 1`
 
-		elif [ $choice -eq 2 ]
+	elif [ $choice -eq 2 ]
 		then
 		echo -n "You picked paper"
 		incr=`expr $incr + 1`
 
-		elif [ $choice -eq 3 ]
+	elif [ $choice -eq 3 ]
 		then
 		echo -n "You picked scissors"
 		incr=`expr $incr + 1`
@@ -82,48 +79,49 @@ then
 		echo -n "Invalid input - try again"
 		continue
 		fi
-		echo "$choice and $compchoice"
-		if [ $choice -eq $compchoice ]
+	echo "$choice and $compchoice"
+	if [ $choice -eq $compchoice ]
 		then
-		echo -n " "
-		echo "DRAW! no points"
-		elif [ $choice -eq 1 ] && [ $compchoice -eq 2 ]
+		echo -n "\nDRAW! no points"
+		continue
+	elif [ $choice -eq 1 ] && [ $compchoice -eq 2 ]
 		then
 		compwins=true
-		elif [ $choice -eq 1 ] && [ $compchoice -eq 3 ]
+	elif [ $choice -eq 1 ] && [ $compchoice -eq 3 ]
 		then
 		wins=true
-		elif [ $choice -eq 2 ] && [ $compchoice -eq 1 ]
+	elif [ $choice -eq 2 ] && [ $compchoice -eq 1 ]
 		then
 		wins=true
-		elif [ $choice -eq 3 ] && [ $compchoice -eq 1 ]
+	elif [ $choice -eq 3 ] && [ $compchoice -eq 1 ]
 		then
 		compwins=true
-		elif [ $choice -eq 2 ] && [ $compchoice -eq 3 ]
+	elif [ $choice -eq 2 ] && [ $compchoice -eq 3 ]
 		then
 		compwins=true
-		elif [ $choice -eq 3 ] && [ $compchoice -eq 2 ]
+	elif [[ $choice -eq 3 ] && [ $compchoice -eq 2 ]]
 		then
 		wins=true
 		else
 		wins=false
 		compwins=false
 		fi
-		if [ $wins=true ]
+	if [ $wins=true ] && [ $compwins=true ]
 		then
-		echo -n "You win!"
+		echo -n "\nYou win!"
 		gamewins=`expr $gamewins + 1`
-		elif [ $compwins=true ]
+	elif [ $compwins=true ] && [ $wins=false ]
 		then
-		echo -n "You lose"
+		echo -n "\nYou lose"
 		compgamewins=`expr $compgamewins + 1`
 		else
-		echo -n "significant calculation error, no score change!"
+		echo -n "\nsignificant calculation error, no score change!"
 		fi
 		done
 	else
-	echo "Too many rounds, I won't let you play this much Rock Paper Scissors at once!!"
+	echo -n "Too many rounds, I won't let you play this much Rock Paper Scissors at once!!"
 	fi
-echo "Exiting.."
-#end
+echo -n "\n\nFINAL SCORE: \nPLAYER:$gameswins\nCPU:$compgamewins"
+echo -n "\nExiting.."
+#end of program
 exit

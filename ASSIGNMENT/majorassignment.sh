@@ -48,6 +48,7 @@ echo -n ""
 if [ $roundnum -lt 101 ]
 then
 	echo -n "\n$roundnum rounds selected!"
+	echo -n "\n highest score wins, good luck!"
 
 	while  [ $incr -lt $roundnum ]
 	do
@@ -84,6 +85,7 @@ then
 		if [ $choice -eq $compchoice ]
 			then
 			echo -n "\nDRAW! no points"
+			#incr=`expr $incr -1`
 			continue
 		elif [ $choice -eq 1 ] && [ $compchoice -eq 2 ]
 			then
@@ -117,7 +119,7 @@ then
 			echo -n "\nYou lose"
 			compgamewins=`expr $compgamewins + 1`
 		else
-			echo -n "\nsignificant calculation error, no score change!"
+			echo -n "\nsignificant calculation error, no score change! Please report this to the developer"
 		fi
 			done
 		else
